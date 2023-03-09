@@ -1,0 +1,23 @@
+---
+title: Posts
+pagination:
+  data: collections.post
+  reverse: true
+  alias: 'posts'
+  size: 2
+permalink: "/build/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+---
+
+<ul>
+  {% for post in posts %}
+    <li>{{ post.data.title }}</li>
+  {% endfor %}
+</ul>
+
+{% if pagination.href.prev %}
+  <a href="{{ pagination.href.prev }}">Previous</a>
+{% endif %}
+
+{% if pagination.href.next %}
+  <a href="{{ pagination.href.next }}">Next</a>
+{% endif %}
