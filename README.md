@@ -13,4 +13,4 @@ The pagination works here in serverless:
 
 But doesn't work when you go to page 2:
 
-  -/serverless/2/
+  - /serverless/2/
